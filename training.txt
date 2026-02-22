@@ -1,0 +1,12 @@
+python src/lerobot/scripts/lerobot_train.py ^
+    --dataset.repo_id=adamascj/so_arm_10 ^
+    --dataset.root=data ^
+    --policy.type=act ^
+    --output_dir=outputs/train/atrapalhar_act ^
+    --job_name=so_arm_test ^
+    --device=cuda ^
+    --training.batch_size=2 ^
+    --training.offline_steps=5000 ^
+    --training.save_freq=1000 ^
+    --training.eval_freq=1000 ^
+    --training.num_workers=0
