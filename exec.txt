@@ -1,0 +1,14 @@
+# MUDE O repo_id a cada execuçao
+# DEPOIS DO MOVIMENTO SAIA COM CONTROL+C
+
+python src/lerobot/scripts/lerobot_record.py ^
+  --robot.type=so101_follower ^
+  --robot.port=COM22 ^
+  --robot.cameras="{'top':{'type':'opencv','index_or_path':2,'width':640,'height':480,'fps':10},'hand':{'type':'opencv','index_or_path':0,'width':640,'height':480,'fps':10}}" ^
+  --policy.type=act ^
+  --policy.pretrained_path=outputs/train/atrapalhar_act/checkpoints/last/pretrained_model ^
+  --dataset.repo_id=local/eval_test_vN ^
+  --dataset.single_task="Atrapalhar" ^
+  --dataset.push_to_hub=False ^
+  --resume=False ^
+  --display_data=True
